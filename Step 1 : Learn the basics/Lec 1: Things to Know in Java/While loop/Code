@@ -1,0 +1,35 @@
+import java.util.*;  
+public class Main {
+	public static void main(String[] args) {
+		// Write your code here
+		int i,evenSum=0,oddSum=0;
+		Scanner scanner=new Scanner(System.in);
+		try {
+			//Convert int to arraylist
+			int input=scanner.nextInt();
+			ArrayList<Integer> num = new ArrayList<Integer>();
+			do
+			{
+				num.add(input % 10);
+				input /= 10;
+			} 	
+			while  (input > 0);
+			//Calculate sum of even and odd digits
+			for (i=0; i<num.size(); i++)
+			{
+				if (num.get(i)%2==0)
+				{
+					evenSum+=num.get(i);
+				}
+				else{
+					oddSum+=num.get(i);
+				}
+			}
+			//Print output
+			System.out.printf("%d %d",evenSum, oddSum);
+		}
+		finally{
+			scanner.close();
+		}
+	}
+}
