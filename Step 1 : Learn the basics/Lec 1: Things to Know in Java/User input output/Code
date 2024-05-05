@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner scanner=new Scanner(System.in);
+        try {
+            //System.out.println("Enter the character : ");
+            char input=scanner.next().charAt(0);
+            if (Character.isAlphabetic(input))
+            {
+                if (Character. toUpperCase(input)==input)
+            {
+                    System.out.println(1);
+            }
+                else if (Character. toLowerCase(input)==input)
+            {
+                    System.out.println(0);
+            }
+            }
+            else {
+                System.out.println("-1");
+            }
+        }
+        finally{
+            scanner.close();
+        }
+    }
+}
